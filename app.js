@@ -19,34 +19,34 @@ const {
         'marca 👉 1 Para obtener el PDF',
         'marca 👉 2 Para conocer la dirección y horarios',
         'marca 👉 3 Para pedir delivery o retirar en el local',
-        'marca 👉 4 Para llamar por teléfono a Gregoria Cocina',
-        '#EL VERDADERO RINCÓN 🇦🇷 EN SANTIAGO',
+        'marca 👉 4 Para agendar un meeting',
+        '#Robots mas inteligentes para responder preguntontas',
         ], 
     );
  
     const flowMenuPDF = addKeyword('1')
         .addAnswer('Nuestra Carta Menu de terraza',)
         .addAnswer(
-            'Te envio una imagen',
-            { media: 'https://botchile.000webhostapp.com/GREGORIA-COCINA.pdf' },)
-        .addAnswer('no necesitás reservar mesa!',);
+            'Te puedo enviar un resumen de lo que hace el servicio',
+            { media: 'xxx.pdf' },)
+        .addAnswer('no necesitás ver el código porque es programable!!',);
 
     const flowLocal = addKeyword('2').addAnswer(
-        'Estamos en Vitacura!',
-        ).addAnswer('AV Padre Hurtado Nº 1376, esquina Las Hualtatas.',
-        ).addAnswer('Martes a Sabado de 10.30 hasta las 19.30 hs.',
-        ).addAnswer('Domingos de 11.30 a 14 hs y los Lunes descansamos',
+        'Estamos en Chile porque somos una plataforma de BOTs!',
+        ).addAnswer('Nuestra oficina física se encuentra en Vitacura',
+        ).addAnswer('Nuestro horario es de oficina de 10 a 13hs.',
+       /// ).addAnswer('Domingos de 11.30 a 14 hs y los Lunes descansamos',
       
     );
       const flowDelivery = addKeyword('3').addAnswer(
-          'Pedí con este link https://mipedido.gregoria.cl/pedir',
-          ).addAnswer('Nuestro sitio web permite pedir a domicilio o retirar en el local',
-          ).addAnswer('Si es tu primera compra, podés canjear los descuentos',
+          'Se puede pagar en linea con tarjetas o transferencia',
+          ).addAnswer('Nuestros servicios se cobran de manera mensual o anual',
+          ).addAnswer('Si es tu primera compra, podés canjear el descuento',
     );
     
       const flowLlamar = addKeyword('4').addAnswer(
-          'Desde tu celular podes marcar directamente',
-          ).addAnswer('+56 9 4868 3859',
+          'Desde el botón se puede llamar para más información',
+          { call: '+56 9 4868 3859'},
           ).addAnswer('Si es tu primera compra, podés canjear los descuentos',
     );
 
