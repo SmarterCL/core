@@ -13,12 +13,13 @@ const {
 
     const flowMenu = addKeyword(['inicio','menu','hola'])
         .addAnswer(
-        '🙌 Bienvenido al bot de Gregoria Cocina')
+        '🙌 Bienvenido al bot de Instalación')
         .addAnswer(
         [        
-        'marca 👉 1 Para obtener la carta de terraza en PDF',
+        'marca 👉 1 Para obtener el PDF',
         'marca 👉 2 Para conocer la dirección y horarios',
         'marca 👉 3 Para pedir delivery o retirar en el local',
+        'marca 👉 4 Para llamar por teléfono a Gregoria Cocina',
         '#EL VERDADERO RINCÓN 🇦🇷 EN SANTIAGO',
         ], 
     );
@@ -42,12 +43,18 @@ const {
           ).addAnswer('Nuestro sitio web permite pedir a domicilio o retirar en el local',
           ).addAnswer('Si es tu primera compra, podés canjear los descuentos',
     );
+    
+      const flowLlamar = addKeyword('4').addAnswer(
+          'Desde tu celular podes marcar directamente',
+          ).addAnswer('+56 9 4868 3859',
+          ).addAnswer('Si es tu primera compra, podés canjear los descuentos',
+    );
 
     //    ----
 
     const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowMenu,flowMenuPDF,flowDelivery,flowLocal])
+    const adapterFlow = createFlow([flowMenu,flowMenuPDF,flowDelivery,flowLocal,flowLlamar])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
